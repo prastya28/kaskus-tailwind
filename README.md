@@ -22,3 +22,4 @@ Sept, 26th 2022
 - [AlpineJS](https://alpinejs.dev) - for dropdown/interactivity
 - [FontAwesome](https://fontawesome.com/icons) - for the icons
 - [PlaceKitten](https://placekitten.com) - for the placeholder images
+- [ddooda (ddobok)](https://youtu.be/z8I6uIkI37k) - for KASKUS.TV video placeholder
