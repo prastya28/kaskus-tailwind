@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         'sans': ['Roboto'],
       },
+      backgroundImage: {
+        'kaskus-footer': "url('/public/assets/img/bg-kaskus-footer.svg')",
+      }
     },
   },
   plugins: [],
