@@ -19,7 +19,7 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body class="bg-gray-200">
+<body class="bg-gray-200" x-init="{ isOpen: false }" x-data="{ isOpen: false }">
 
     <!-- TITLE NAV -->
     <nav class="bg-white border-b border-gray-200">
@@ -54,10 +54,10 @@
         <div class="container flex justify-center mx-auto">
             <div class="flex space-x-5 text-xs">
                 <!-- Dropdown -->
-                <div x-init="{ isOpen: false }" x-data="{ isOpen: false }" @mouseleave="isOpen = false"
-                    class="flex py-1.5 border-r px-2 relative">
+                <div @mouseleave="isOpen = false" class="flex py-1.5 border-r px-2 relative">
                     <button @mouseover="isOpen = true"
-                        class="block text-gray-900 hover:bg-gray-200 rounded-sm px-4 py-1 transition duration-100 uppercase">
+                        class="block text-gray-900 hover:bg-gray-200 rounded-sm px-4 py-1 transition duration-100 uppercase"
+                        :class="isOpen ? 'bg-gray-200' : ''">
                         Komunitas <i class="fa-solid fa-chevron-down"></i>
                     </button>
 
@@ -68,9 +68,12 @@
                         x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
                         class="absolute right-0 z-10 w-60 mt-7 bg-white shadow-xl">
                         <div class="m-3">
-                            <button
-                                class="border border-blue-700 text-blue-700 hover:bg-blue-200 rounded-sm transition duration-100 py-2 px-5 w-full mt-2 uppercase">Buat
-                                Komunitas</button>
+                            <a href="">
+                                <div
+                                    class="border border-blue-700 text-blue-700 text-center hover:bg-blue-200 rounded-sm transition duration-100 py-2 px-5 w-full mt-2 uppercase">
+                                    Buat
+                                    Komunitas</div>
+                            </a>
                         </div>
                         <div class="mx-3 mb-3">
                             <input type="text" id="input-group-search"
@@ -137,14 +140,14 @@
     </nav>
 
     <!-- CONTENT START -->
-    <div class="flex justify-between gap-8 p-14">
+    <div class="flex mx-auto max-w-fit justify-between gap-8 p-14">
         <div class="flex-auto w-72">
             <div class="h-auto bg-white p-4">
                 <div class="font-bold text-xl"><i class="fa-solid fa-star text-blue-500"></i> Komunitas Baru</div>
                 <a href="#">
                     <div class="flex items-center space-x-4 mt-5">
                         <div class="flex-shrink-0">
-                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/201/300" alt="Komunitas ABC">
                         </div>
                         <div class="flex-1 min-w-0">
                             <p class="text-sm text-gray-900 font-bold">
@@ -159,11 +162,11 @@
                 <a href="#">
                     <div class="flex items-center space-x-4 mt-5">
                         <div class="flex-shrink-0">
-                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/202/300" alt="Komunitas ABC">
                         </div>
                         <div class="flex-1 min-w-0">
                             <p class="text-sm text-gray-900 font-bold">
-                                Komunitas ABC
+                                Komunitas DEF
                             </p>
                             <p class="text-sm text-gray-500">
                                 45 Threads &middot; 20.0k Posts
@@ -174,11 +177,11 @@
                 <a href="#">
                     <div class="flex items-center space-x-4 mt-5">
                         <div class="flex-shrink-0">
-                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/203/300" alt="Komunitas ABC">
                         </div>
                         <div class="flex-1 min-w-0">
                             <p class="text-sm text-gray-900 font-bold">
-                                Komunitas ABC
+                                Komunitas GHI
                             </p>
                             <p class="text-sm text-gray-500">
                                 45 Threads &middot; 20.0k Posts
@@ -189,30 +192,11 @@
                 <a href="#">
                     <div class="flex items-center space-x-4 mt-5">
                         <div class="flex-shrink-0">
-                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/204/300" alt="Komunitas ABC">
                         </div>
                         <div class="flex-1 min-w-0">
                             <p class="text-sm text-gray-900 font-bold">
-                                Komunitas ABC
-                            </p>
-                            <p class="text-sm text-gray-500">
-                                45 Threads &middot; 20.0k Posts
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="h-auto bg-white p-4 mt-3">
-                <div class="font-bold text-xl"><i class="fa-solid fa-star text-blue-500"></i> Komunitas Baru</div>
-                <a href="#">
-                    <div class="flex items-center space-x-4 mt-5">
-                        <div class="flex-shrink-0">
-                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <p class="text-sm text-gray-900 font-bold">
-                                Komunitas ABC
+                                Komunitas JKL
                             </p>
                             <p class="text-sm text-gray-500">
                                 45 Threads &middot; 20.0k Posts
@@ -223,41 +207,11 @@
                 <a href="#">
                     <div class="flex items-center space-x-4 mt-5">
                         <div class="flex-shrink-0">
-                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/205/300" alt="Komunitas ABC">
                         </div>
                         <div class="flex-1 min-w-0">
                             <p class="text-sm text-gray-900 font-bold">
-                                Komunitas ABC
-                            </p>
-                            <p class="text-sm text-gray-500">
-                                45 Threads &middot; 20.0k Posts
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="flex items-center space-x-4 mt-5">
-                        <div class="flex-shrink-0">
-                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <p class="text-sm text-gray-900 font-bold">
-                                Komunitas ABC
-                            </p>
-                            <p class="text-sm text-gray-500">
-                                45 Threads &middot; 20.0k Posts
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="flex items-center space-x-4 mt-5">
-                        <div class="flex-shrink-0">
-                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <p class="text-sm text-gray-900 font-bold">
-                                Komunitas ABC
+                                Komunitas MNO
                             </p>
                             <p class="text-sm text-gray-500">
                                 45 Threads &middot; 20.0k Posts
@@ -505,12 +459,13 @@
             <div class="h-fit bg-white p-4">
                 <div class="">
                     <div><img src="assets/img/logo-kaskus-full.svg" class="h-10" alt=""></div>
-                    <div>
-                        <button
-                            class="bg-blue-500 hover:bg-blue-400 transition duration-100 text-white py-1 px-5 rounded-md w-full mt-4">Buat
+                    <a href="#">
+                        <div
+                            class="text-center bg-blue-500 hover:bg-blue-400 transition duration-100 text-white py-1 px-5 rounded-md w-full mt-4">
+                            Buat
                             Thread
-                            Sekarang</button>
-                    </div>
+                            Sekarang</div>
+                    </a>
                 </div>
             </div>
 
@@ -550,6 +505,171 @@
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+
+    <div class="bg-gray-300 pt-4">
+        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 text-gray-400">
+            <ul class="text-xs font-light pb-16 flex flex-wrap justify-center">
+                <li class="w-1/2 md:w-1/5 lg:w-1/5">
+                    <div class="text-left">
+                        <h2 class="text-gray-800 font-bold mb-4">
+                            KASKUS
+                        </h2>
+                        <ul>
+                            <li class="mb-3 text-gray-800 transition-colors duration-200">
+                                <a href="#">
+                                    Pusat Bantuan
+                                </a>
+                            </li>
+                            <li class="mb-3 text-gray-800 transition-colors duration-200">
+                                <a href="#">
+                                    Tentang Kami
+                                </a>
+                            </li>
+                            <li class="mb-3 text-gray-800 transition-colors duration-200">
+                                <a href="#">
+                                    Hubungi Kami
+                                </a>
+                            </li>
+                            <li class="text-gray-800 transition-colors duration-200">
+                                <a href="#">
+                                    Kebijakan Privasi
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="w-1/2 md:w-1/5 lg:w-1/5">
+                    <div class="text-left">
+                        <h2 class="text-gray-800 font-bold mb-4">
+                            Navigasi
+                        </h2>
+                        <ul>
+                            <li class="mb-3 text-gray-800 transition-colors duration-200">
+                                <a href="#">
+                                    Forum
+                                </a>
+                            </li>
+                            <li class="mb-3 text-gray-800 transition-colors duration-200">
+                                <a href="#">
+                                    Jual Beli
+                                </a>
+                            </li>
+                            <li class="mb-3 text-gray-800 transition-colors duration-200">
+                                <a href="#">
+                                    Arsip
+                                </a>
+                            </li>
+                            <li class="text-gray-800 transition-colors duration-200">
+                                <a href="#">
+                                    Widget
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="w-1/2 md:w-1/5 lg:w-1/5">
+                    <div class="text-left">
+                        <h2 class="text-gray-800 font-bold mb-4">
+                            Jual Beli
+                        </h2>
+                        <ul>
+                            <li class="mb-3 text-gray-800 transition-colors duration-200">
+                                <a href="#">
+                                    Cara Jual
+                                </a>
+                            </li>
+                            <li class="mb-3 text-gray-800 transition-colors duration-200">
+                                <a href="#">
+                                    Berjualan - FAQ
+                                </a>
+                            </li>
+                            <li class="mb-3 text-gray-800 transition-colors duration-200">
+                                <a href="#">
+                                    Cara Membeli
+                                </a>
+                            </li>
+                            <li class="text-gray-800 transition-colors duration-200">
+                                <a href="#">
+                                    Pembelian - FAQ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="w-1/2 md:w-1/5 lg:w-1/5">
+                    <div class="text-left">
+                        <h2 class="text-gray-800 font-bold mb-4">
+                            Download di Play Store
+                        </h2>
+                        <ul>
+                            <li class="mb-3 text-gray-800 transition-colors duration-200">
+                                <a href="#">
+                                    KASKUS Forum
+                                </a>
+                            </li>
+                            <li class="text-gray-800 transition-colors duration-200">
+                                <a href="#">
+                                    KASKUS Jual Beli
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="w-1/2 md:w-1/5 lg:w-1/5">
+                    <div class="text-left">
+                        <h2 class="text-gray-800 font-bold mb-4">
+                            Download di App Store
+                        </h2>
+                        <ul>
+                            <li class="mb-3 text-gray-800 transition-colors duration-200">
+                                <a href="#">
+                                    KASKUS Forum
+                                </a>
+                            </li>
+                            <li class="text-gray-800 transition-colors duration-200">
+                                <a href="#">
+                                    KASKUS Jual Beli
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bg-gray-800 pt-8 pb-8">
+        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 text-gray-400">
+            <div class="flex mx-auto items-center justify-between">
+                <div class="text-sm">
+                    &copy; 2022 KUSKAS, PT Sudarta Media Indonesia. All rights reserved
+                </div>
+                <div class="space-x-4">
+                    <span class="text-sm">
+                        Ikuri KASKUS di
+                    </span>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- JAVASCRIPT CODE (IF ANY) -->
     <script src="assets/js/scripts.js"></script>
