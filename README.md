@@ -4,7 +4,7 @@ KASKUS home page made with TailwindCSS + AlpineJS. Currently work in progress.
 
 Not 100% accurate and made for learning purpose.
 
-### My issue
+### Problem
 
 When I set any of the left sidebar content to "sticky top" the dropdown get burried behind it.
 
