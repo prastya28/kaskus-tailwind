@@ -15,3 +15,10 @@ When I set any of the left sidebar content to "sticky top" the dropdown get burr
 Sept, 26th 2022
 
 ![Screenshot / Sept 25th 2022](https://github.com/prastya28/kaskus-tailwind/blob/main/public/assets/img/ss_06.png)
+
+### Credits
+
+- [TailwindCSS](https://tailwindcss.com)
+- [AlpineJS](https://alpinejs.dev)
+- [FontAwesome Icons](https://fontawesome.com/icons)
+- [PlaceKitten](https://placekitten.com)
