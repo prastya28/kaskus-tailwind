@@ -52,12 +52,12 @@
     <!-- TOP MENU STICKY NAV -->
     <nav class="bg-white sticky top-0 border-b border-gray-200">
         <div class="container flex justify-center mx-auto">
-            <div class="flex space-x-5 text-xs uppercase">
+            <div class="flex space-x-5 text-xs">
                 <!-- Dropdown -->
                 <div x-init="{ isOpen: false }" x-data="{ isOpen: false }" @mouseleave="isOpen = false"
                     class="flex py-1.5 border-r px-2 relative">
                     <button @mouseover="isOpen = true"
-                        class="block relative z-10 text-gray-900 hover:bg-gray-200 rounded-sm px-4 py-1 transition duration-100 uppercase">
+                        class="block text-gray-900 hover:bg-gray-200 rounded-sm px-4 py-1 transition duration-100 uppercase">
                         Komunitas <i class="fa-solid fa-chevron-down"></i>
                     </button>
 
@@ -66,7 +66,7 @@
                         x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
                         x-transition:leave="transition ease-in duration-100"
                         x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90"
-                        class="absolute right-0 z-20 w-60 mt-7 bg-white shadow-xl">
+                        class="absolute right-0 z-10 w-60 mt-7 bg-white shadow-xl">
                         <div class="m-3">
                             <button
                                 class="border border-blue-700 text-blue-700 hover:bg-blue-200 rounded-sm transition duration-100 py-2 px-5 w-full mt-2 uppercase">Buat
@@ -79,7 +79,7 @@
                         </div>
                         <div>
                             <a href="#"
-                                class="flex items-center px-2 py-2 text-sm text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 hover:text-blue-500 font-bold">
+                                class="flex items-center px-2 py-2 text-sm text-gray-600 transition-colors duration-300 transform hover:bg-gray-100 hover:text-blue-500 font-bold">
                                 <i class="fa-solid fa-users"></i>
                                 <span class="mx-1">
                                     Komunitas Populer
@@ -88,19 +88,19 @@
                         </div>
                         <div>
                             <a href="#"
-                                class="flex items-center px-3 py-3 text-xs text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 hover:text-blue-500">
+                                class="flex items-center px-3 py-3 text-xs text-gray-600 transition-colors duration-300 transform hover:bg-gray-100 hover:text-blue-500">
                                 Berita dan Politik
                             </a>
                             <a href="#"
-                                class="flex items-center px-3 py-3 text-xs text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 hover:text-blue-500">
+                                class="flex items-center px-3 py-3 text-xs text-gray-600 transition-colors duration-300 transform hover:bg-gray-100 hover:text-blue-500">
                                 Gosip Nyok!
                             </a>
                             <a href="#"
-                                class="flex items-center px-3 py-3 text-xs text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 hover:text-blue-500">
+                                class="flex items-center px-3 py-3 text-xs text-gray-600 transition-colors duration-300 transform hover:bg-gray-100 hover:text-blue-500">
                                 The Lounge
                             </a>
                             <a href="#"
-                                class="flex items-center px-3 py-3 text-xs text-gray-600 capitalize transition-colors duration-300 transform hover:bg-gray-100 hover:text-blue-500">
+                                class="flex items-center px-3 py-3 text-xs text-gray-600 transition-colors duration-300 transform hover:bg-gray-100 hover:text-blue-500">
                                 Games
                             </a>
                         </div>
@@ -137,112 +137,416 @@
     </nav>
 
     <!-- CONTENT START -->
-    <div class="grid grid-cols-4 gap-4 content-center m-14">
-        <div class="row-end-auto bg-white p-4">
-            <div class="font-bold text-xl"><i class="fa-solid fa-star text-blue-500"></i> Komunitas Baru</div>
-            <a href="#">
-                <div class="flex items-center space-x-4 mt-5">
-                    <div class="flex-shrink-0">
-                        <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+    <div class="flex justify-between gap-8 p-14">
+        <div class="flex-auto w-72">
+            <div class="h-auto bg-white p-4">
+                <div class="font-bold text-xl"><i class="fa-solid fa-star text-blue-500"></i> Komunitas Baru</div>
+                <a href="#">
+                    <div class="flex items-center space-x-4 mt-5">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm text-gray-900 font-bold">
+                                Komunitas ABC
+                            </p>
+                            <p class="text-sm text-gray-500">
+                                45 Threads &middot; 20.0k Posts
+                            </p>
+                        </div>
                     </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm text-gray-900 font-bold">
-                            Komunitas ABC
-                        </p>
-                        <p class="text-sm text-gray-500">
-                            45 Threads &middot; 20.0k Posts
-                        </p>
+                </a>
+                <a href="#">
+                    <div class="flex items-center space-x-4 mt-5">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm text-gray-900 font-bold">
+                                Komunitas ABC
+                            </p>
+                            <p class="text-sm text-gray-500">
+                                45 Threads &middot; 20.0k Posts
+                            </p>
+                        </div>
                     </div>
-                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                        $320
+                </a>
+                <a href="#">
+                    <div class="flex items-center space-x-4 mt-5">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm text-gray-900 font-bold">
+                                Komunitas ABC
+                            </p>
+                            <p class="text-sm text-gray-500">
+                                45 Threads &middot; 20.0k Posts
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="flex items-center space-x-4 mt-5">
-                    <div class="flex-shrink-0">
-                        <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                </a>
+                <a href="#">
+                    <div class="flex items-center space-x-4 mt-5">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm text-gray-900 font-bold">
+                                Komunitas ABC
+                            </p>
+                            <p class="text-sm text-gray-500">
+                                45 Threads &middot; 20.0k Posts
+                            </p>
+                        </div>
                     </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm text-gray-900 font-bold">
-                            Komunitas ABC
-                        </p>
-                        <p class="text-sm text-gray-500">
-                            45 Threads &middot; 20.0k Posts
-                        </p>
+                </a>
+            </div>
+
+            <div class="h-auto bg-white p-4 mt-3">
+                <div class="font-bold text-xl"><i class="fa-solid fa-star text-blue-500"></i> Komunitas Baru</div>
+                <a href="#">
+                    <div class="flex items-center space-x-4 mt-5">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm text-gray-900 font-bold">
+                                Komunitas ABC
+                            </p>
+                            <p class="text-sm text-gray-500">
+                                45 Threads &middot; 20.0k Posts
+                            </p>
+                        </div>
                     </div>
-                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                        $320
+                </a>
+                <a href="#">
+                    <div class="flex items-center space-x-4 mt-5">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm text-gray-900 font-bold">
+                                Komunitas ABC
+                            </p>
+                            <p class="text-sm text-gray-500">
+                                45 Threads &middot; 20.0k Posts
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="flex items-center space-x-4 mt-5">
-                    <div class="flex-shrink-0">
-                        <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                </a>
+                <a href="#">
+                    <div class="flex items-center space-x-4 mt-5">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm text-gray-900 font-bold">
+                                Komunitas ABC
+                            </p>
+                            <p class="text-sm text-gray-500">
+                                45 Threads &middot; 20.0k Posts
+                            </p>
+                        </div>
                     </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm text-gray-900 font-bold">
-                            Komunitas ABC
-                        </p>
-                        <p class="text-sm text-gray-500">
-                            45 Threads &middot; 20.0k Posts
-                        </p>
+                </a>
+                <a href="#">
+                    <div class="flex items-center space-x-4 mt-5">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm text-gray-900 font-bold">
+                                Komunitas ABC
+                            </p>
+                            <p class="text-sm text-gray-500">
+                                45 Threads &middot; 20.0k Posts
+                            </p>
+                        </div>
                     </div>
-                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                        $320
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="flex items-center space-x-4 mt-5">
-                    <div class="flex-shrink-0">
-                        <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm text-gray-900 font-bold">
-                            Komunitas ABC
-                        </p>
-                        <p class="text-sm text-gray-500">
-                            45 Threads &middot; 20.0k Posts
-                        </p>
-                    </div>
-                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                        $320
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="flex items-center space-x-4 mt-5">
-                    <div class="flex-shrink-0">
-                        <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm text-gray-900 font-bold">
-                            Komunitas ABC
-                        </p>
-                        <p class="text-sm text-gray-500">
-                            45 Threads &middot; 20.0k Posts
-                        </p>
-                    </div>
-                    <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                        $320
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-span-2 h-14 w-auto bg-white p-4">
-            <div class="font-bold text-xl flex"><img src="assets/img/ic-hot-thread.svg" class="h-6 mr-2" alt=""> Hot
-                Threads
+                </a>
             </div>
         </div>
-        <div class="h-28 w-auto bg-white p-4">
-            <div><img src="assets/img/logo-kaskus-full.svg" class="h-10" alt=""></div>
-            <div>
-                <button
-                    class="bg-blue-500 hover:bg-blue-400 transition duration-100 text-white py-1 px-5 rounded-md w-full mt-2">Buat
-                    Thread
-                    Sekarang</button>
+
+        <div class="flex-auto">
+            <div class="h-14 bg-white p-4">
+                <div class="font-bold text-xl flex"><img src="assets/img/ic-hot-thread.svg" class="h-6 mr-2" alt=""> Hot
+                    Threads
+                </div>
+            </div>
+
+            <!-- Posts -->
+            <div class="h-auto bg-white p-4 mt-3">
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm text-gray-900 font-bold">
+                            Pets &middot; <span><a href="" class="text-blue-600">Gabung</a></span>
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            <a href="#" class="font-semibold">deadmau5</a> &middot; Hari ini 12:12
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <a href="#" class="text-xl font-semibold">Cats are the best!</a>
+                </div>
+                <div class="mt-2">
+                    <a href="#">
+                        <img class="rounded-md" src="https://placekitten.com/600/300" alt="">
+                    </a>
+                </div>
+                <div class="flex justify-between">
+                    <div class="mt-4 items-center justify-start">
+                        <a href="#" class="hover:text-green-600"><i class="fa-solid fa-arrow-up"></i></a>
+                        <span class="text-sm mx-4">69</span>
+                        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-arrow-down"></i></a>
+                    </div>
+                    <div class="mt-4 text-right justify-end text-gray-600">
+                        <i class="fa-solid fa-eye"></i>
+                        <span class="text-sm mx-4">69k</span>
+                        <a href="#" class="hover:text-blue-600"><i class="fa-solid fa-reply"></i></a>
+                        <span class="text-sm mx-4">420</span>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="h-auto bg-white p-4 mt-3">
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm text-gray-900 font-bold">
+                            Pets &middot; <span><a href="" class="text-blue-600">Gabung</a></span>
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            <a href="#" class="font-semibold">meowington</a> &middot; Hari ini 12:12
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <a href="#" class="text-xl font-semibold">I love cats!</a>
+                </div>
+                <div class="mt-2">
+                    <a href="#">
+                        <img class="rounded-md" src="https://placekitten.com/601/301" alt="">
+                    </a>
+                </div>
+                <div class="flex justify-between">
+                    <div class="mt-4 items-center justify-start">
+                        <a href="#" class="hover:text-green-600"><i class="fa-solid fa-arrow-up"></i></a>
+                        <span class="text-sm mx-4">69</span>
+                        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-arrow-down"></i></a>
+                    </div>
+                    <div class="mt-4 text-right justify-end text-gray-600">
+                        <i class="fa-solid fa-eye"></i>
+                        <span class="text-sm mx-4">69k</span>
+                        <a href="#" class="hover:text-blue-600"><i class="fa-solid fa-reply"></i></a>
+                        <span class="text-sm mx-4">420</span>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="h-auto bg-white p-4 mt-3">
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm text-gray-900 font-bold">
+                            Pets &middot; <span><a href="" class="text-blue-600">Gabung</a></span>
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            <a href="#" class="font-semibold">mr.whiskers</a> &middot; Hari ini 12:12
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <a href="#" class="text-xl font-semibold">17 cats is not enough!</a>
+                </div>
+                <div class="mt-2">
+                    <a href="#">
+                        <img class="rounded-md" src="https://placekitten.com/602/302" alt="">
+                    </a>
+                </div>
+                <div class="flex justify-between">
+                    <div class="mt-4 items-center justify-start">
+                        <a href="#" class="hover:text-green-600"><i class="fa-solid fa-arrow-up"></i></a>
+                        <span class="text-sm mx-4">69</span>
+                        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-arrow-down"></i></a>
+                    </div>
+                    <div class="mt-4 text-right justify-end text-gray-600">
+                        <i class="fa-solid fa-eye"></i>
+                        <span class="text-sm mx-4">69k</span>
+                        <a href="#" class="hover:text-blue-600"><i class="fa-solid fa-reply"></i></a>
+                        <span class="text-sm mx-4">420</span>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="h-auto bg-white p-4 mt-3">
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm text-gray-900 font-bold">
+                            Pets &middot; <span><a href="" class="text-blue-600">Gabung</a></span>
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            <a href="#" class="font-semibold">deadmau5</a> &middot; Hari ini 12:12
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <a href="#" class="text-xl font-semibold">Cats are the best!</a>
+                </div>
+                <div class="mt-2">
+                    <a href="#">
+                        <img class="rounded-md" src="https://placekitten.com/600/300" alt="">
+                    </a>
+                </div>
+                <div class="flex justify-between">
+                    <div class="mt-4 items-center justify-start">
+                        <a href="#" class="hover:text-green-600"><i class="fa-solid fa-arrow-up"></i></a>
+                        <span class="text-sm mx-4">69</span>
+                        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-arrow-down"></i></a>
+                    </div>
+                    <div class="mt-4 text-right justify-end text-gray-600">
+                        <i class="fa-solid fa-eye"></i>
+                        <span class="text-sm mx-4">69k</span>
+                        <a href="#" class="hover:text-blue-600"><i class="fa-solid fa-reply"></i></a>
+                        <span class="text-sm mx-4">420</span>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="h-auto bg-white p-4 mt-3">
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm text-gray-900 font-bold">
+                            Pets &middot; <span><a href="" class="text-blue-600">Gabung</a></span>
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            <a href="#" class="font-semibold">meowington</a> &middot; Hari ini 12:12
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <a href="#" class="text-xl font-semibold">I love cats!</a>
+                </div>
+                <div class="mt-2">
+                    <a href="#">
+                        <img class="rounded-md" src="https://placekitten.com/601/301" alt="">
+                    </a>
+                </div>
+                <div class="flex justify-between">
+                    <div class="mt-4 items-center justify-start">
+                        <a href="#" class="hover:text-green-600"><i class="fa-solid fa-arrow-up"></i></a>
+                        <span class="text-sm mx-4">69</span>
+                        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-arrow-down"></i></a>
+                    </div>
+                    <div class="mt-4 text-right justify-end text-gray-600">
+                        <i class="fa-solid fa-eye"></i>
+                        <span class="text-sm mx-4">69k</span>
+                        <a href="#" class="hover:text-blue-600"><i class="fa-solid fa-reply"></i></a>
+                        <span class="text-sm mx-4">420</span>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="h-auto bg-white p-4 mt-3">
+                <div class="flex items-center space-x-4">
+                    <div class="flex-shrink-0">
+                        <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm text-gray-900 font-bold">
+                            Pets &middot; <span><a href="" class="text-blue-600">Gabung</a></span>
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            <a href="#" class="font-semibold">mr.whiskers</a> &middot; Hari ini 12:12
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <a href="#" class="text-xl font-semibold">17 cats is not enough!</a>
+                </div>
+                <div class="mt-2">
+                    <a href="#">
+                        <img class="rounded-md" src="https://placekitten.com/602/302" alt="">
+                    </a>
+                </div>
+                <div class="flex justify-between">
+                    <div class="mt-4 items-center justify-start">
+                        <a href="#" class="hover:text-green-600"><i class="fa-solid fa-arrow-up"></i></a>
+                        <span class="text-sm mx-4">69</span>
+                        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-arrow-down"></i></a>
+                    </div>
+                    <div class="mt-4 text-right justify-end text-gray-600">
+                        <i class="fa-solid fa-eye"></i>
+                        <span class="text-sm mx-4">69k</span>
+                        <a href="#" class="hover:text-blue-600"><i class="fa-solid fa-reply"></i></a>
+                        <span class="text-sm mx-4">420</span>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex-auto w-72">
+            <div class="h-fit bg-white p-4">
+                <div class="">
+                    <div><img src="assets/img/logo-kaskus-full.svg" class="h-10" alt=""></div>
+                    <div>
+                        <button
+                            class="bg-blue-500 hover:bg-blue-400 transition duration-100 text-white py-1 px-5 rounded-md w-full mt-4">Buat
+                            Thread
+                            Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white sticky top-12 mt-3 p-4">
+                <div class="font-bold text-xl"><i class="fa-solid fa-thumbs-up text-green-600"></i> Thread Rekomendasi
+                </div>
+                <a href="#">
+                    <div class="flex items-center space-x-4 mt-5">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm text-gray-900 font-bold">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <p class="text-sm text-gray-500">
+                                Dummy Category
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="flex items-center space-x-4 mt-5">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="https://placekitten.com/200/300" alt="Komunitas ABC">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-sm text-gray-900 font-bold">
+                                Quia tempora eligendi ipsa iste veniam?
+                            </p>
+                            <p class="text-sm text-gray-500">
+                                Dummy Category
+                            </p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
