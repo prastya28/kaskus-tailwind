@@ -18,8 +18,9 @@ Sept, 26th 2022
 
 ### Credits
 
+- [KASKUS](https://www.kaskus.co.id) - for the inspiration
 - [TailwindCSS](https://tailwindcss.com) - for the framework
-- [AlpineJS](https://alpinejs.dev) - for dropdown/interactivity
+- [AlpineJS](https://alpinejs.dev) - for the dropdown/interactivity
 - [FontAwesome](https://fontawesome.com/icons) - for the icons
 - [PlaceKitten](https://placekitten.com) - for the placeholder images
-- [ddooda (ddobok)](https://youtu.be/z8I6uIkI37k) - for KASKUS.TV video placeholder
+- [ddooda (ddobok)](https://youtu.be/z8I6uIkI37k) - for the KASKUS.TV video placeholder
