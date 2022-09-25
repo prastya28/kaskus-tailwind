@@ -1,12 +1,12 @@
 # kaskus-tailwind
 
-KASKUS home page made with TailwindCSS + AlpineJS. Currently work in progress.
+KASKUS home page made with TailwindCSS + AlpineJS. Currently still work in progress and **not** responsive.
 
-Not 100% accurate and made for learning purpose.
+It's not 100% accurate and made for learning purpose.
 
 ### Problem
 
-When I set any of the left sidebar content to "sticky top" the dropdown get burried behind it.
+When I set the left sidebar to "sticky top" the dropdown menu get burried under the sidebar.
 
 [Like this](https://github.com/prastya28/kaskus-tailwind/blob/main/public/assets/img/problem_02.png) instead of just like the screenshot below.
 
@@ -14,7 +14,7 @@ When I set any of the left sidebar content to "sticky top" the dropdown get burr
 
 Sept, 26th 2022
 
-![Screenshot / Sept 25th 2022](https://github.com/prastya28/kaskus-tailwind/blob/main/public/assets/img/ss_06.png)
+![Screenshot / Sept 25th 2022](https://github.com/prastya28/kaskus-tailwind/blob/main/public/assets/img/ss_07.png)
 
 ### Credits
 
