@@ -12,6 +12,10 @@ module.exports = {
       backgroundImage: {
         'kaskus-footer': "url('/public/assets/img/bg-kaskus-footer.svg')",
       },
+      colors: {
+        'kaskus-color': '#1384c2',
+        'kaskus-footer-copy': '#464646',
+      },
     },
   },
   plugins: [],

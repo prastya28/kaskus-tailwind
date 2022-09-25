@@ -18,7 +18,7 @@ Sept, 26th 2022
 
 ### Credits
 
-- [TailwindCSS](https://tailwindcss.com)
-- [AlpineJS](https://alpinejs.dev)
-- [FontAwesome Icons](https://fontawesome.com/icons)
-- [PlaceKitten](https://placekitten.com)
+- [TailwindCSS](https://tailwindcss.com) - for the framework
+- [AlpineJS](https://alpinejs.dev) - for dropdown/interactivity
+- [FontAwesome](https://fontawesome.com/icons) - for the icons
+- [PlaceKitten](https://placekitten.com) - for the placeholder images
