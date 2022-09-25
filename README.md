@@ -8,7 +8,7 @@ Not 100% accurate and made for learning purpose.
 
 When I set any of the left sidebar content to "sticky top" the dropdown get burried behind it.
 
-[Like this](https://github.com/prastya28/kaskus-tailwind/blob/main/public/assets/img/problem_04.png) instead of just like the screenshot below.
+[Like this](https://github.com/prastya28/kaskus-tailwind/blob/main/public/assets/img/problem_01.png) instead of just like the screenshot below.
 
 ### Screenshot
 
