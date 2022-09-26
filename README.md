@@ -4,12 +4,6 @@ KASKUS home page made with TailwindCSS + AlpineJS. Currently still work in progr
 
 It's not 100% accurate and made for learning purpose.
 
-### Problem
-
-I want the left sidebar to be **_sticky top_** just like one of the right sidebar. But, when I set the left sidebar to **_sticky top_** the navbar dropdown menu get burried under the sidebar. So, I just leave it without the **_sticky top_** for now.
-
-[Like this](https://github.com/prastya28/kaskus-tailwind/blob/main/public/assets/img/problem_03.png) instead of just like the screenshot below.
-
 ### Screenshot
 
 Sept, 26th 2022
