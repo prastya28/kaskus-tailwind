@@ -1,6 +1,6 @@
 # kaskus-tailwind
 
-KASKUS home page made with TailwindCSS + AlpineJS. Currently still work in progress and **not** responsive.
+KASKUS home page made with TailwindCSS + AlpineJS. Currently work in progress and **NOT RESPONSIVE** & still look bad on mobile or smaller screen.
 
 It's not 100% accurate and made for learning purpose.
 
