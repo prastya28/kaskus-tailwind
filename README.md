@@ -1,16 +1,22 @@
 # kaskus-tailwind
 
-KASKUS home page made with TailwindCSS + AlpineJS. Currently work in progress and **NOT RESPONSIVE** & still look bad on mobile or smaller screen.
+KASKUS home page made with TailwindCSS + AlpineJS. Still **NOT RESPONSIVE** and doesn't look good on mobile or smaller screen.
 
 It's not 100% accurate and made for learning purpose.
 
+### Features
+
+- Dual navbar with sticky top menu.
+- Dropdown menu open on hover using AlpineJS.
+- Sticky top left and right sidebar on scroll.
+
 ### Demo & Screenshot
 
-Updated at **_Sept, 26th 2022_**
+Updated at **_Sept, 28th 2022_**
 
 Demo: [https://prastya.my.id/demo/kaskus-tailwind](https://prastya.my.id/demo/kaskus-tailwind/)
 
-![Screenshot / Sept 25th 2022](https://github.com/prastya28/kaskus-tailwind/blob/main/public/assets/img/ss_08.png)
+![Screenshot / Sept 28th 2022](https://github.com/prastya28/kaskus-tailwind/blob/main/public/assets/img/ss_09.png)
 
 ### Credits
 
