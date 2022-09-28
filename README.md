@@ -16,7 +16,7 @@ Updated at **_Sept, 28th 2022_**
 
 Demo: [https://prastya.my.id/demo/kaskus-tailwind](https://prastya.my.id/demo/kaskus-tailwind/)
 
-![Screenshot / Sept 28th 2022](https://github.com/prastya28/kaskus-tailwind/blob/main/public/assets/img/ss_09.png)
+![Screenshot / Sept 28th 2022](https://github.com/prastya28/kaskus-tailwind/blob/main/public/assets/img/ss_10.png)
 
 ### Credits
 
