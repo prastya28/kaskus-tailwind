@@ -15,7 +15,8 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
-<body class="bg-gray-200" x-init="{ isOpen: false }" x-data="{ isOpen: false }">
+<body class="bg-gray-200" x-init="{ isOpen: false, isScroll: false }" x-data="{ isOpen: false, isScroll: false }"
+    @scroll.window="window.pageYOffset > 60 ? isScroll = true : isScroll = false">
 
     <!-- TITLE NAV -->
     <nav class="bg-white border-b border-gray-200">
@@ -51,18 +52,24 @@
         <div class="container flex justify-around mx-auto max-w-fit">
             <div class="flex space-x-5 text-xs">
 
+                <a href="#" class="block text-gray-900 hover:text-kaskus-color py-2.5 transition-all duration-100"
+                    :class="{'hidden': !isScroll}">
+                    <img src="assets/img/ic-kaskus.svg" alt="KASKUS Icon" class="h-7">
+                </a>
+
                 <!-- STICKY NAV MENU START -->
-                <div @mouseleave="isOpen = false" class="flex py-1.5 border-r px-2 relative">
+                <div @mouseleave="isOpen = false" class="flex py-2 border-r pr-2 relative">
 
                     <!-- DROPDOWN BUTTON -->
                     <button @mouseover="isOpen = true"
-                        class="block text-gray-900 hover:bg-gray-200 rounded-sm px-4 py-1 transition duration-100 uppercase"
+                        class="block text-gray-900 hover:bg-gray-200 rounded-sm px-4 py-2 transition duration-100 uppercase"
                         :class="isOpen ? 'bg-gray-200' : ''">
                         Komunitas<i class="fa-solid fa-chevron-down ml-2"></i>
                     </button>
 
                     <!-- DROPDOWN CONTENT -->
-                    <div x-show="isOpen" class="absolute left-0 z-50 w-60 mt-7 bg-white shadow-xl origin-top-right">
+                    <div x-show="isOpen"
+                        class="absolute left-0 top-4 z-50 w-60 mt-7 bg-white shadow-xl origin-top-right">
                         <div class="m-3">
                             <a href="">
                                 <div
@@ -107,30 +114,43 @@
                 </div>
 
                 <a href="#"
-                    class="block text-gray-900 hover:text-kaskus-color py-2.5 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">
+                    class="block text-gray-900 hover:text-kaskus-color py-4 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">
                     For
                     You</a>
                 <a href="#"
-                    class="block text-gray-900 hover:text-kaskus-color py-2.5 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Story</a>
+                    class="block text-gray-900 hover:text-kaskus-color py-4 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Story</a>
                 <a href="#"
-                    class="block text-gray-900 hover:text-kaskus-color py-2.5 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Hobby</a>
+                    class="block text-gray-900 hover:text-kaskus-color py-4 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Hobby</a>
                 <a href="#"
-                    class="block text-gray-900 hover:text-kaskus-color py-2.5 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Games</a>
+                    class="block text-gray-900 hover:text-kaskus-color py-4 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Games</a>
                 <a href="#"
-                    class="block text-gray-900 hover:text-kaskus-color py-2.5 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Entertainment</a>
+                    class="block text-gray-900 hover:text-kaskus-color py-4 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Entertainment</a>
                 <a href="#"
-                    class="block text-gray-900 hover:text-kaskus-color py-2.5 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Film</a>
+                    class="block text-gray-900 hover:text-kaskus-color py-4 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Film</a>
                 <a href="#"
-                    class="block text-gray-900 hover:text-kaskus-color py-2.5 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Tech</a>
+                    class="block text-gray-900 hover:text-kaskus-color py-4 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Tech</a>
                 <a href="#"
-                    class="block text-gray-900 hover:text-kaskus-color py-2.5 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Automotive</a>
+                    class="block text-gray-900 hover:text-kaskus-color py-4 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Automotive</a>
                 <a href="#"
-                    class="block text-gray-900 hover:text-kaskus-color py-2.5 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Sports</a>
+                    class="block text-gray-900 hover:text-kaskus-color py-4 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Sports</a>
                 <a href="#"
-                    class="block text-gray-900 hover:text-kaskus-color py-2.5 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Food
+                    class="block text-gray-900 hover:text-kaskus-color py-4 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">Food
                     & Travel</a>
                 <a href="#"
-                    class="block text-gray-900 hover:text-kaskus-color py-2.5 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">News</a>
+                    class="block text-gray-900 hover:text-kaskus-color py-4 px-1 border-b-2 border-white hover:border-kaskus-color transition duration-100 uppercase">News</a>
+
+                <div class="flex items-center" :class="{'hidden': !isScroll}">
+                    <div class="border-r border-gray-300">
+                        <a href="" class="text-sm text-gray-500 font-semibold hover:text-kaskus-color uppercase mr-3">
+                            <i class="fa-solid fa-pencil mr-1"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-sm text-gray-500 font-semibold hover:text-kaskus-color uppercase ml-3">
+                            Masuk
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -140,7 +160,7 @@
 
         <!-- CONTENT LEFT -->
         <div class="flex-auto w-72">
-            <div class="h-auto bg-white p-4 sticky top-12" :class="isOpen ? '-z-10' : ''">
+            <div class="h-auto bg-white p-4 sticky top-16" :class="isOpen ? '-z-10' : ''">
                 <div class="font-semibold text-xl mb-5 items-center">
                     <i class="fa-solid fa-star text-kaskus-color mr-2"></i>Komunitas Baru
                 </div>
@@ -538,7 +558,7 @@
                 </div>
             </div>
 
-            <div class="bg-white sticky top-12 mt-3 p-4">
+            <div class="bg-white sticky top-16 mt-3 p-4">
                 <div class="font-semibold text-xl items-center mb-5">
                     <i class="fa-solid fa-thumbs-up text-kaskus-color-b mr-2"></i>Rekomendasi
                 </div>
